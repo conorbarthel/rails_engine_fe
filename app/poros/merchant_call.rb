@@ -3,6 +3,6 @@ class MerchantCall
 
   def initialize(data)
     @api_id = data[:id]
-    @name = data[:name]
+    @name = data[:attributes][:name]
   end
 end

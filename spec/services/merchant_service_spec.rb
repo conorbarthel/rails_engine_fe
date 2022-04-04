@@ -7,10 +7,10 @@ RSpec.describe MerchantService do
       expect(response).to be_a Faraday::Connection
     end
   end
-  context '#get_merchant' do
+  context '#get_merchants' do
     it "returns merchant data" do
-      merchant = MerchantService.get_merchant('1')
-      expect(merchant).to be_a MerchantCall
+      merchants = MerchantService.get_merchants
+      expect(merchants).to be_a Hash
     end
   end
 end

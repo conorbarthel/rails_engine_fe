@@ -4,7 +4,9 @@ RSpec.describe MerchantCall do
   it 'builds a merchant object when data is passed in' do
     data = {
       id: "6",
-      name: "Conor's Crap"
+      attributes: {
+        name: "Conor's Crap"
+      }
     }
     @merchant = MerchantCall.new(data)
 
