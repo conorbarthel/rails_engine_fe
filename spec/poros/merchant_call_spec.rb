@@ -11,3 +11,4 @@ RSpec.describe MerchantCall do
     expect(@merchant).to be_an_instance_of(MerchantCall)
     expect(@merchant.api_id).to eq("6")
   end
+end
