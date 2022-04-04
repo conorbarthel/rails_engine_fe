@@ -5,4 +5,5 @@ class MerchantFacade
       MerchantCall.new(merchant_data)
     end
   end
+  
 end
