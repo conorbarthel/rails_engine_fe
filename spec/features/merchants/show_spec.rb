@@ -11,7 +11,10 @@ RSpec.describe 'Merchants index page' do
   end
 
   it "lists the merchants items" do
-    
+    merchant = @merchants.last
+    merchants_items = MerchantFacade.get_merchants_items(merchant.api_id)
+    merchants_items.each do |item|
+      expect(page).to have_content(item.name)
+    end
   end
-
 end

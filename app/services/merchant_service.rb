@@ -8,6 +8,11 @@ class MerchantService
     attrs = JSON.parse(response.body, symbolize_names: true)
   end
 
+  def self.get_merchant(id)
+    response = connect.get("api/v1/merchants/#{id}")
+    attrs = JSON.parse(response.body, symbolize_names: true)
+  end
+
   def self.get_merchants_items(id)
     response = connect.get("/api/v1/merchants/#{id}/items")
     attrs = JSON.parse(response.body, symbolize_names: true)
