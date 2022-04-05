@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe 'Merchants index page' do
-  @merchants = MerchantFacade.get_merchants
+
   before(:each) do
-    visit merchant_path(@merchants.last)
+    @merchants = MerchantFacade.get_merchants
+    visit merchant_path(@merchants.last.api_id)
   end
 
   it "has a title with the merchant's name" do
+    save_and_open_page
     expect(page).to have_content(@merchants.last.name)
   end
 
