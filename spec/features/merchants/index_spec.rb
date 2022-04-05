@@ -11,10 +11,12 @@ RSpec.describe 'Merchants index page' do
 
   it "has links to all merchants" do
     @merchants = MerchantFacade.get_merchants
+    @merchant = @merchants.first
     @merchants.each do |merchant|
       expect(page).to have_content(merchant.name)
     end
+    #binding.pry
     click_on "#{@merchants.first.name}"
-    expect(current_path).to eq(merchant_path(@merchants.first.api_id))
+    expect(current_path).to eq(merchant_path(@merchant.api_id))
   end
 end

@@ -12,8 +12,12 @@ RSpec.describe Item do
       }
     }
     @item = Item.new(data)
-
+    
     expect(@item).to be_an_instance_of(Item)
     expect(@item.api_id).to eq("6")
+    expect(@item.name).to eq("crud")
+    expect(@item.description).to eq("stuff")
+    expect(@item.unit_price).to eq(1000000000000000)
+    expect(@item.merchant_id).to eq(1)
   end
 end

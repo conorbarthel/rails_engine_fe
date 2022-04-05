@@ -8,7 +8,6 @@ RSpec.describe 'Merchants index page' do
   end
 
   it "has a title with the merchant's name" do
-    save_and_open_page
     expect(page).to have_content(@merchants.last.name)
   end
 

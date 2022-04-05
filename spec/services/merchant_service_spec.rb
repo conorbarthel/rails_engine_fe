@@ -15,7 +15,7 @@ RSpec.describe MerchantService do
   end
   context '#get_merchant' do
     it "returns a merchants data" do
-      merchants = MerchantService.get_merchant
+      merchants = MerchantService.get_merchant(3)
       expect(merchants).to be_a Hash
     end
   end

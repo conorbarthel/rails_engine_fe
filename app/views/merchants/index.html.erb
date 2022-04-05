@@ -4,6 +4,6 @@
 
 <div class="list">
   <% @merchants.each do |merchant| %>
-    <%= link_to "#{merchant.name}", merchant_path(merchant) %><br>
+    <%= link_to "#{merchant.name}", merchant_path(merchant.api_id) %><br>
   <% end %>
 </div>
